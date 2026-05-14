@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-bg: #0f0f0f;
+  --color-brand-sidebar: #141414;
+  --color-brand-card: #1a1a1a;
+  --color-brand-border: #242424;
+  --color-brand-accent: #f59e0b; /* Amber 500 */
+}
+
+@layer base {
+  * {
+    @apply border-brand-border;
+  }
+  body {
+    @apply bg-brand-bg text-[#e0e0e0];
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.amber-gradient {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+/* Custom scrollbar for horizontal tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
