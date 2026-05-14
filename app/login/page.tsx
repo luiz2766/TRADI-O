@@ -23,6 +23,7 @@ export default function LoginPage() {
 
       if (error) throw error;
       toast.success('Bem-vindo de volta!');
+      router.push('/');
     } catch (error: any) {
       toast.error(error.message || 'Erro ao fazer login');
     } finally {
